@@ -28,8 +28,10 @@ Coloca los PDFs con información de la tienda en la carpeta `pdfs/`
 ```bash
 python main_app.py
 ```
-
 ### 2. Abrir el frontend
+Renombrar el .env.txt que se genero en la carpeta del proyecto a .env
+
+### 3. Abrir el frontend
 Abre `Frontend/index.html` en tu navegador
 
 ## Verificar que funciona
