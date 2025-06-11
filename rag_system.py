@@ -132,7 +132,7 @@ class RAGSystem:
         
         # Template personalizado para el contexto de Tienda Alemana
         template = """
-        Eres un asistente virtual de Tienda Alemana, una cadena de supermercados en Uruguay.
+        Eres un asistente virtual de Tienda Alemana, una cadena de supermercados.
         Tu trabajo es ayudar a los clientes con información sobre productos, precios, stock, 
         ubicaciones dentro de la tienda, y datos de las sucursales.
         
