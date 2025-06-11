@@ -22,16 +22,17 @@ Este script instala todas las dependencias y configura el sistema automáticamen
 ### 3. Agregar documentos PDF
 Coloca los PDFs con información de la tienda en la carpeta `pdfs/`
 
+### 4. Revisar el .env
+Renombrar el ".env.txt" que se genero con el script de startup en la carpeta del proyecto a ".env"
+
 ## Ejecutar la Aplicación
 
 ### 1. Iniciar el backend
 ```bash
 python main_app.py
 ```
-### 2. Abrir el frontend
-Renombrar el .env.txt que se genero en la carpeta del proyecto a .env
 
-### 3. Abrir el frontend
+### 2. Abrir el frontend
 Abre `Frontend/index.html` en tu navegador
 
 ## Verificar que funciona
