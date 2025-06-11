@@ -18,6 +18,8 @@ load_dotenv()
 PDF_DIRECTORY = os.getenv('PDF_DIRECTORY')
 # Obtener el nombre del modelo de Ollama desde las variables de entorno
 OLLAMA_MODEL = os.getenv('OLLAMA_MODEL')
+# Definir el directorio de persistencia para Chroma
+CHROMA_PERSIST_DIRECTORY = os.getenv('CHROMA_PERSIST_DIRECTORY')
 
 class RAGSystem:
     def __init__(self, pdf_directory: str = PDF_DIRECTORY, model_name: str = OLLAMA_MODEL):
@@ -109,7 +111,7 @@ class RAGSystem:
         self.vectorstore = Chroma.from_documents(
             documents=splits,
             embedding=self.embeddings,
-            persist_directory="./chroma_db"
+            persist_directory=CHROMA_PERSIST_DIRECTORY
         )
         
         print("Vectorstore creado exitosamente")
