@@ -119,6 +119,9 @@ OLLAMA_MODEL=llama3.1
 # Puerto para la API
 API_PORT=8000
 
+# URL Ollama
+OLLAMA_PORT=http://localhost:11434
+
 # Configuracion de logging
 LOG_LEVEL=INFO
 
