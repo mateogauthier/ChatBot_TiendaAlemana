@@ -110,8 +110,8 @@ def create_env_template():
     """Crea un archivo .env.txt de ejemplo"""
     print("Creando archivo de configuración...")
     
-    env_content = """# Configuración del Chatbot Tienda Alemana
-# Copia este archivo como .env y ajusta los valores según necesites
+    env_content = """# Configuracion del Chatbot Tienda Alemana
+# Copia este archivo como .env y ajusta los valores segun necesites
 
 # Modelo de Ollama a usar
 OLLAMA_MODEL=llama3.1
@@ -119,13 +119,13 @@ OLLAMA_MODEL=llama3.1
 # Puerto para la API
 API_PORT=8000
 
-# Configuración de logging
+# Configuracion de logging
 LOG_LEVEL=INFO
 
 # Directorio de PDFs
 PDF_DIRECTORY=./pdfs
 
-# Configuración de ChromaDB
+# Configuracion de ChromaDB
 CHROMA_PERSIST_DIRECTORY=./chroma_db
 """
     
