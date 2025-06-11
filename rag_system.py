@@ -20,9 +20,11 @@ PDF_DIRECTORY = os.getenv('PDF_DIRECTORY')
 OLLAMA_MODEL = os.getenv('OLLAMA_MODEL')
 # Definir el directorio de persistencia para Chroma
 CHROMA_PERSIST_DIRECTORY = os.getenv('CHROMA_PERSIST_DIRECTORY')
+# Obtener el puerto/base_url de Ollama desde las variables de entorno
+OLLAMA_PORT = os.getenv('OLLAMA_PORT')
 
 class RAGSystem:
-    def __init__(self, pdf_directory: str = PDF_DIRECTORY, model_name: str = OLLAMA_MODEL):
+    def __init__(self, pdf_directory: str = PDF_DIRECTORY, model_name: str = OLLAMA_MODEL, base_url: str = OLLAMA_PORT):
         """
         Inicializa el sistema RAG
         
@@ -32,6 +34,7 @@ class RAGSystem:
         """
         self.pdf_directory = pdf_directory
         self.model_name = model_name
+        self.base_url = base_url
         self.embeddings = None
         self.vectorstore = None
         self.llm = None
