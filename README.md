@@ -13,6 +13,9 @@ Sistema de chatbot inteligente para atención al cliente utilizando RAG (Retriev
 Descarga e instala desde [ollama.ai](https://ollama.ai/)
 
 ### 2. Configuración automática
+
+Dentro de la carpeta del Obligatorio
+
 ```bash
 python setup_script.py
 ```
