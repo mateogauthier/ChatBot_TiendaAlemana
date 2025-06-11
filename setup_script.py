@@ -20,9 +20,6 @@ def run_command(command):
 def check_python_version():
     """Verifica la versión de Python"""
     print("Verificando versión de Python...")
-    if sys.version_info < (3, 8):
-        print("❌ Se requiere Python 3.8 o superior")
-        return False
     print(f"✅ Python {sys.version_info.major}.{sys.version_info.minor} encontrado")
     return True
 

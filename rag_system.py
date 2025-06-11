@@ -9,9 +9,18 @@ from langchain.chains import RetrievalQA
 from langchain_core.prompts import PromptTemplate
 from typing import List, Dict
 import ollama
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env
+load_dotenv()
+
+# Obtener el directorio de PDFs desde las variables de entorno
+PDF_DIRECTORY = os.getenv('PDF_DIRECTORY')
+# Obtener el nombre del modelo de Ollama desde las variables de entorno
+OLLAMA_MODEL = os.getenv('OLLAMA_MODEL')
 
 class RAGSystem:
-    def __init__(self, pdf_directory: str = "./pdfs", model_name: str = "llama3.1"):
+    def __init__(self, pdf_directory: str = PDF_DIRECTORY, model_name: str = OLLAMA_MODEL):
         """
         Inicializa el sistema RAG
         
@@ -76,7 +85,6 @@ class RAGSystem:
         
         if not pdf_files:
             print("No se encontraron archivos PDF. Creando datos de ejemplo...")
-            self._create_sample_data()
             return
         
         # Cargar documentos PDF
@@ -105,74 +113,6 @@ class RAGSystem:
         )
         
         print("Vectorstore creado exitosamente")
-    
-    def _create_sample_data(self):
-        """Crea datos de ejemplo si no hay PDFs"""
-        from langchain.schema import Document
-        
-        sample_docs = [
-            Document(
-                page_content="""
-                Catálogo de Productos - Tienda Alemana
-                
-                Leche Entera 1L - Precio: $65 - Stock: 120 unidades
-                Pan de Molde Blanco - Precio: $110 - Stock: 50 unidades
-                Arroz 1kg - Precio: $98 - Stock: 200 unidades
-                Queso Muzzarella 500g - Precio: $280 - Stock: 35 unidades
-                Yogur Frutilla 125g - Precio: $38 - Stock: 85 unidades
-                Fideos Spaghetti 500g - Precio: $72 - Stock: 150 unidades
-                Atún en Lata 170g - Precio: $125 - Stock: 60 unidades
-                Galletitas Oreo 118g - Precio: $78 - Stock: 100 unidades
-                Jugo de Naranja 1L - Precio: $89 - Stock: 90 unidades
-                Detergente Limón 750ml - Precio: $99 - Stock: 70 unidades
-                """,
-                metadata={"source": "catalogo_productos.pdf"}
-            ),
-            Document(
-                page_content="""
-                Ubicación de Productos - Tienda Alemana
-                
-                Leche Entera 1L - Sección: Lácteos - Góndola 2
-                Pan de Molde Blanco - Sección: Panificados - Góndola 1
-                Arroz 1kg - Sección: Almacén - Góndola 5
-                Queso Muzzarella 500g - Sección: Lácteos - Góndola 2
-                Yogur Frutilla 125g - Sección: Lácteos - Góndola 3
-                Fideos Spaghetti 500g - Sección: Almacén - Góndola 5
-                Atún en Lata 170g - Sección: Conservas - Góndola 4
-                Galletitas Oreo 118g - Sección: Dulces - Góndola 6
-                Jugo de Naranja 1L - Sección: Bebidas - Góndola 7
-                Detergente Limón 750ml - Sección: Limpieza - Góndola 9
-                """,
-                metadata={"source": "ubicacion_productos.pdf"}
-            ),
-            Document(
-                page_content="""
-                Información de Sucursales - Tienda Alemana
-                
-                Tienda Alemana Central:
-                Dirección: Av. 18 de Julio 1234, Montevideo
-                Horarios: Todos los días de 8:00 a 22:00
-                
-                Tienda Alemana Pocitos:
-                Dirección: Av. Brasil 2020, Montevideo
-                Horarios: Lunes a Sábado de 9:00 a 21:00
-                
-                Tienda Alemana Carrasco:
-                Dirección: Av. Arocena 1550, Montevideo
-                Horarios: Todos los días de 8:00 a 20:00
-                """,
-                metadata={"source": "info_sucursales.pdf"}
-            )
-        ]
-        
-        # Crear vectorstore con datos de ejemplo
-        self.vectorstore = Chroma.from_documents(
-            documents=sample_docs,
-            embedding=self.embeddings,
-            persist_directory="./chroma_db"
-        )
-        
-        print("Datos de ejemplo creados exitosamente")
     
     def _setup_llm(self):
         """Configura el modelo de lenguaje Ollama"""
