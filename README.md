@@ -124,9 +124,6 @@ cd Frontend/chatbot-react
 # Instalar dependencias
 npm install
 
-# Instalar Tailwind CSS si no está configurado
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
 ```
 
 ## ⚙️ Configuración
@@ -198,7 +195,7 @@ python main_app.py
 cd Frontend/chatbot-react
 
 # Ejecutar servidor de desarrollo
-npm start
+npm run dev
 ```
 
 **Disponible en:** http://localhost:3000
