@@ -324,12 +324,4 @@ python main_app.py
 - Revisa la pestaña Console para errores
 - Network para ver las peticiones HTTP
 
-### Contacto y Soporte
-
-Para problemas o sugerencias:
-- 🐛 Issues: [GitHub Issues](https://github.com/usuario/ChatBot_TiendaAlemana/issues)
-- 📖 Documentación: http://localhost:8000/docs
-
----
-
 **¡Tu chatbot de Tienda Alemana está listo! 🎉**
