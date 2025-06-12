@@ -3,8 +3,9 @@ import ChatHeader from './components/ChatHeader';
 import ChatMessages from './components/ChatMessages';
 import ChatInput from './components/ChatInput';
 import QuickQuestions from './components/QuickQuestions';
+import env from './env';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = env.API_SERVER_URL;
 
 export default function App() {
   const [messages, setMessages] = useState([
