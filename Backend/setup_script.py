@@ -20,6 +20,10 @@ def run_command(command):
 def check_python_version():
     """Verifica la versión de Python"""
     print("Verificando versión de Python...")
+    if sys.version_info < (3, 8):
+        print("❌ Python 3.8 o superior es requerido")
+        print("Por favor, actualiza tu versión de Python")
+        return False
     print(f"✅ Python {sys.version_info.major}.{sys.version_info.minor} encontrado")
     return True
 
@@ -53,8 +57,7 @@ def install_requirements():
         "langchain",
         "langchain-community",
         "chromadb",
-        "pypdf2",
-        "python-multipart",
+        "pypdf",
         "pydantic",
         "ollama",
         "python-dotenv",

@@ -1,54 +1,10 @@
-# Tienda Alemana Chatbot - Dependencias actualizadas
-# Compatible con Python 3.9 - 3.13
-# Instalación: pip install -r requirements.txt
-
-# Framework web
-fastapi==0.115.0
-uvicorn[standard]==0.32.0
-
-# Pydantic para validación de datos
-pydantic==2.10.2
-
-# CORS y middleware
-python-multipart==0.0.12
-
-# Variables de entorno
-python-dotenv==1.0.1
-
-# Langchain y componentes relacionados - versiones actualizadas
-langchain==0.3.9
-langchain-community==0.3.8
-langchain-core==0.3.21
-langchain-huggingface==0.1.2
-langchain-ollama==0.2.1
-
-# Embeddings y transformers
-sentence-transformers==3.3.1
-transformers==4.46.3
-torch>=2.6.0
-
-# Base de datos vectorial
-chromadb==0.5.20
-
-# Procesamiento de PDFs
-pypdf==5.1.0
-
-# Cliente Ollama
-ollama==0.4.4
-
-# Dependencias adicionales para procesamiento de texto
-numpy>=1.24.0
-pandas>=2.0.0
-
-# Utilidades de sistema
-requests>=2.31.0
-
-# Tokenización y procesamiento NLP
-tiktoken>=0.7.0
-
-# HuggingFace Hub para modelos
-huggingface-hub>=0.26.0
-
-# Utilidades adicionales
-tqdm>=4.66.0
-typing-extensions>=4.8.0
+fastapi
+uvicorn
+pydantic
+python-dotenv
+langchain
+langchain-community
+chromadb
+pypdf
+sentence-transformers
+ollama
