@@ -151,6 +151,9 @@ pids
 *.pid
 *.seed
 
+# env generated file
+.env.txt
+
 # Optional REPL history
 .node_repl_history
 
