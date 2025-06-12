@@ -182,11 +182,6 @@ cd Backend
 python main_app.py
 ```
 
-**El backend estará disponible en:**
-- 🌐 API: http://localhost:8000
-- 📚 Documentación: http://localhost:8000/docs
-- 🔍 Health Check: http://localhost:8000/health
-
 ### 2. Ejecutar Frontend
 
 #### React App
