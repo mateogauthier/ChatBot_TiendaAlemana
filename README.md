@@ -33,9 +33,9 @@ ChatBot_TiendaAlemana/
 │   ├── setup_script.py      # Script de configuración automática
 │   └── requirements.txt     # Dependencias Python
 ├── Frontend/
-│   ├── index.html          # Frontend HTML básico
 │   └── chatbot-react/      # Aplicación React
 │       ├── src/
+│       │   ├── index.html
 │       │   ├── App.jsx
 │       │   ├── components/
 │       │   └── styles/
