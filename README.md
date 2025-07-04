@@ -5,10 +5,10 @@ Un chatbot inteligente para atención al cliente de Tienda Alemana, construido c
 ## 📋 Tabla de Contenidos
 
 - [Características](#-características)
-- [Arquitectura](#-arquitectura)
+- [Arquitectura](#️-arquitectura)
 - [Requisitos Previos](#-requisitos-previos)
 - [Instalación](#-instalación)
-- [Configuración](#-configuración)
+- [Configuración](#️-configuración)
 - [Ejecución](#-ejecución)
 - [Uso](#-uso)
 - [API Endpoints](#-api-endpoints)
@@ -123,7 +123,6 @@ cd Frontend/chatbot-react
 
 # Instalar dependencias
 npm install
-
 ```
 
 ## ⚙️ Configuración
@@ -194,7 +193,6 @@ npm run dev
 ```
 
 **Disponible en:** http://localhost:3000
-
 
 ## 💡 Uso
 
